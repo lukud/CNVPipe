@@ -13,7 +13,7 @@ import argparse
 def parse_arguments():
     parser = argparse.ArgumentParser(description='Prepare assembly for WSSD calling')
     parser.add_argument('-a', '--assembly', type=str, help='Path to assembly')
-    parser.add_argument('-m', '--masks', type=str, , nargs='+', help='Path to \
+    parser.add_argument('-m', '--masks', type=str, nargs='+', help='Path to \
                         BED-file(s) with masking coordinates')
     parser.add_argument('-k,', '--ksize', type=int, help='Size of k-mers for masking',\
                         default=36, metavar='K')
