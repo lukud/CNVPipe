@@ -19,7 +19,7 @@ def parse_arguments():
     parser.add_argument('-k,', '--ksize', type=int, help='Size of k-mers for masking',\
                         default=36, metavar='K')
     parser.add_argument('-s', '--step', type=int, help='Offset of k-mers for masking',\
-                        default=36, metavar='S')
+                        default=5, metavar='S')
     parser.add_argument('-t', '--threads', type=int, help='Number of threads to run GEM with',\
                         default=1)
     parser.add_argument('-o', '--outfolder', type=str, help='Output folder prefix,\
@@ -95,7 +95,7 @@ def map_kmers(assembly, kmers, out_prefix, gem_path, gem_parameter_string=\
     generate index file and map kmers from the assembly
     """
 
-    
+    pass
 
 
 if __name__=='__main__':
