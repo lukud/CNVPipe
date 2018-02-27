@@ -11,7 +11,8 @@ import argparse
 
 
 def parse_arguments():
-    parser = argparse.ArgumentParser(description='Prepare assembly for WSSD calling')
+    parser = argparse.ArgumentParser(description='Prepare assembly for WSSD calling',\
+                                    formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('-a', '--assembly', type=str, help='Path to assembly')
     parser.add_argument('-m', '--masks', type=str, nargs='+', help='Path to \
                         BED-file(s) with masking coordinates. All files must be \
@@ -99,5 +100,6 @@ def map_kmers(assembly, kmers, out_prefix, gem_path, gem_parameter_string=\
 
 
 if __name__=='__main__':
+
     args=parse_arguments()
-    print(args)
+    assembly=load_assembly(args.assembly)
